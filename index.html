@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title> para o mo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffe6f0;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ff3399;
+    }
+
+    .buttons {
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff99cc;
+      color: white;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    #nao {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>A Be é o amor da minha vida</h1>
+  <div class="buttons">
+    <button onclick="respostaSim()">Sim</button>
+    <button id="nao" onmouseover="fugir()">Não</button>
+  </div>
+
+  <script>
+    function respostaSim() {
+      window.location.href = "parabens.html";
+    }
+
+    function fugir() {
+      const button = document.getElementById('nao');
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
